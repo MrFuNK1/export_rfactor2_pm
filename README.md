@@ -18,47 +18,49 @@ Note: The addon is not enabled after install, please tick the checkbox on the le
 The export script will search your Blender scene for default suspension objects and writes the required entries into a PM file. In case the weight was set for these objects (option available through a new menu in the UI), the export includes a simplified calculation of the object's inertia. Please see the notes on setting the weight and inertia calculation below.
 
 ## Default suspension objects
-body
-fl_fore_lower
-fl_fore_upper
-fl_rear_lower
-fl_rear_upper
-fl_spindle
-fl_steering
-fl_wheel
-fr_fore_lower
-fr_fore_upper
-fr_rear_lower
-fr_rear_upper
-fr_spindle
-fr_steering
-fr_wheel
-fr_spindle
-fr_wheel
-rl_fore_lower
-rl_fore_upper
-rl_rear_lower
-rl_rear_upper
-rl_spindle
-rl_toelink
-rl_wheel
-rr_fore_lower
-rr_fore_upper
-rr_rear_lower
-rr_rear_upper
-rr_spindle
-rr_toelink
-rr_wheel
-fuel tank
-driver head
+* body
+* fl_fore_lower
+* fl_fore_upper
+* fl_rear_lower
+* fl_rear_upper
+* fl_spindle
+* fl_steering
+* fl_wheel
+* fr_fore_lower
+* fr_fore_upper
+* fr_rear_lower
+* fr_rear_upper
+* fr_spindle
+* fr_steering
+* fr_wheel
+* fr_spindle
+* fr_wheel
+* rl_fore_lower
+* rl_fore_upper
+* rl_rear_lower
+* rl_rear_upper
+* rl_spindle
+* rl_toelink
+* rl_wheel
+* rr_fore_lower
+* rr_fore_upper
+* rr_rear_lower
+* rr_rear_upper
+* rr_spindle
+* rr_toelink
+* rr_wheel
+* fuel tank
+* driver head
 
-Please note that for fuel_tank and driver_head only default settings will be exported because headphysics and HDV do overwrite these settings anyway.
+Please note that for "fuel_tank" and "driver_head" only default settings will be exported because headphysics and HDV do overwrite these settings anyway.
 
 Please also note that suspension bodies will be exported with inertia set to 0 if no weight was set for the respective object.
 
 ## Setting weight
 When the addon is active, there will be a new tab added on the right side in the 3D Viewport:
+
 ![Screenshot of the tab menu in the 3D Viewport](img/ui_mass.png)
+
 The value set is weight in kg and will be used to calculate the inertia (see details below).
 
 ## Inertia calculation
@@ -66,4 +68,8 @@ The intertia will be calculated with simplified formulas for a box (body) or cyl
 However. As a starting point, you may want to size the body box to the outlines of your vehicle and set the weight to the approx. weight of the bodywork and chassis. For the wheels and spindles you may scale the cylinders a little smaller than their real counterparts and set the weight to values lower than the actual weight.
 
 ## Final notes
-Please only use simplified 3D objects for the representation of the suspension objects. I recommend you to use my "Blender rF2 Studio - Car" application template (https://github.com/MrFuNK1/Blender-rF2-Studio) that already has the required simplified suspension objects included. Of course you can (and maybe should) put 3D objects of your vehicle into the scene, but make sure to not use any of the default suspension objects names or the script will fail.
+Please only use simplified 3D objects for the representation of the suspension objects. I recommend you to use my "Blender rF2 Studio - Car" application template ([get it here](https://github.com/MrFuNK1/Blender-rF2-Studio)) that already has the required simplified suspension objects included:
+
+![Screenshot of the simplified suspension objects as part of the "Blender rF2 Studio - Car" application template](img/suspension_objects.png)
+
+Of course you can (and maybe should) put 3D objects of your vehicle into the scene, but make sure to not use any of the default suspension objects names or the script will fail.
